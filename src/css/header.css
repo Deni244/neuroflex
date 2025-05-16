@@ -1,0 +1,130 @@
+/* Header styles */
+.header__container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.header__container::before {
+  content: url(/img/star-6.svg);
+  position: absolute;
+  right: 90px;
+  bottom: 18px;
+  width: 27px;
+  height: 27px;
+  transform: rotate(-12deg);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 1px;
+}
+
+.header__burger {
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__btn {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .header__container {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .header__container::before {
+    right: 164px;
+    bottom: -142px;
+    width: 54px;
+    height: 54px;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header__nav {
+    display: block;
+  }
+  .header__nav-list {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    margin-left: 90px;
+    color: var(--gray-0-color);
+  }
+  .header__nav-item:hover {
+    color: var(--primary-color);
+  }
+  .header__btn {
+    display: flex;
+    padding: 13px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: var(--gray-10-color);
+    border: 1px solid rgba(255, 255, 255, 0.47);
+    background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+  }
+  .header__btn:hover, .header__btn:focus {
+    background: linear-gradient(227deg, #18c8ff 7%, #933ffe 29.53%);
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+  }
+  .header__btn:active {
+    transform: scale(0.95);
+    background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+  }
+}
+@media (max-width: 1920px) and (min-width: 1440px) {
+  .header__container {
+    padding-left: 113px;
+  }
+  .header__container::before {
+    right: 107px;
+    bottom: -147px;
+  }
+  .header_logo {
+    letter-spacing: 0px;
+  }
+  .header__nav-list {
+    gap: 32px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1440px) {
+  .header_logo {
+    font-size: 16px;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
+  .header__container::before {
+    right: 97px;
+    bottom: 25px;
+  }
+}/*# sourceMappingURL=header.css.map */
